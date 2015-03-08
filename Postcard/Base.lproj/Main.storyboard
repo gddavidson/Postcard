@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Qa-R8-VK3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Postcard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,234 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RRH-0d-vt0">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="o9h-Na-hN9"/>
+                                    <constraint firstAttribute="height" constant="80" id="tr0-Ts-a6B"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="o9h-Na-hN9"/>
+                                        <exclude reference="tr0-Ts-a6B"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="304" y="147" width="80" height="80"/>
+                                    <mask key="constraints">
+                                        <include reference="o9h-Na-hN9"/>
+                                        <include reference="tr0-Ts-a6B"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lG1-2X-L6x">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="248" width="368" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lRW-73-msf">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="286" width="368" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAW-gd-VFu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send Mail">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="197" width="280" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendMailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OVO-dX-PPe"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2D-uI-Qcl">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="72" width="368" height="67"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RRH-0d-vt0" firstAttribute="top" secondItem="b2D-uI-Qcl" secondAttribute="bottom" constant="8" symbolic="YES" id="3xm-Lj-E6n"/>
+                            <constraint firstItem="lG1-2X-L6x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6uc-Gv-mBj">
+                                <variation key="widthClass=compact" constant="4"/>
+                            </constraint>
+                            <constraint firstItem="b2D-uI-Qcl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="91o-yy-VWB"/>
+                            <constraint firstItem="lRW-73-msf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Alv-mm-KKU">
+                                <variation key="widthClass=compact" constant="4"/>
+                            </constraint>
+                            <constraint firstItem="vAW-gd-VFu" firstAttribute="bottom" secondItem="RRH-0d-vt0" secondAttribute="bottom" id="CBB-Eq-hqw"/>
+                            <constraint firstItem="b2D-uI-Qcl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ITQ-jN-ng8"/>
+                            <constraint firstItem="vAW-gd-VFu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="Iki-0d-KO6"/>
+                            <constraint firstItem="lG1-2X-L6x" firstAttribute="top" secondItem="RRH-0d-vt0" secondAttribute="bottom" constant="8" id="NPH-01-dDq">
+                                <variation key="widthClass=compact" constant="8" symbolic="YES"/>
+                            </constraint>
+                            <constraint firstItem="lG1-2X-L6x" firstAttribute="top" secondItem="vAW-gd-VFu" secondAttribute="bottom" constant="8" symbolic="YES" id="RNF-hU-KWB"/>
+                            <constraint firstItem="RRH-0d-vt0" firstAttribute="leading" secondItem="vAW-gd-VFu" secondAttribute="trailing" constant="8" symbolic="YES" id="dpd-Ik-I2z"/>
+                            <constraint firstItem="lG1-2X-L6x" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eJq-vk-8gw">
+                                <variation key="widthClass=compact" constant="4"/>
+                            </constraint>
+                            <constraint firstItem="b2D-uI-Qcl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="4" id="jZe-0e-AbF"/>
+                            <constraint firstItem="lRW-73-msf" firstAttribute="top" secondItem="lG1-2X-L6x" secondAttribute="bottom" constant="32" id="o5v-4O-kXs"/>
+                            <constraint firstItem="lRW-73-msf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oxA-2K-ig5">
+                                <variation key="widthClass=compact" constant="4"/>
+                            </constraint>
+                            <constraint firstItem="RRH-0d-vt0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="p2U-8m-qFa"/>
+                            <constraint firstItem="vAW-gd-VFu" firstAttribute="top" secondItem="lRW-73-msf" secondAttribute="bottom" constant="8" id="pwh-r9-mt2"/>
+                            <constraint firstItem="RRH-0d-vt0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="4" id="sDD-qQ-pJs"/>
+                            <constraint firstItem="lRW-73-msf" firstAttribute="top" secondItem="lG1-2X-L6x" secondAttribute="bottom" constant="8" symbolic="YES" id="tGa-5w-KUu"/>
+                            <constraint firstItem="vAW-gd-VFu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="4" id="wgY-qK-sIp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="RRH-0d-vt0"/>
+                                <exclude reference="lG1-2X-L6x"/>
+                                <exclude reference="lRW-73-msf"/>
+                                <exclude reference="vAW-gd-VFu"/>
+                                <exclude reference="b2D-uI-Qcl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="91o-yy-VWB"/>
+                                <exclude reference="ITQ-jN-ng8"/>
+                                <exclude reference="jZe-0e-AbF"/>
+                                <exclude reference="CBB-Eq-hqw"/>
+                                <exclude reference="Iki-0d-KO6"/>
+                                <exclude reference="pwh-r9-mt2"/>
+                                <exclude reference="wgY-qK-sIp"/>
+                                <exclude reference="6uc-Gv-mBj"/>
+                                <exclude reference="NPH-01-dDq"/>
+                                <exclude reference="RNF-hU-KWB"/>
+                                <exclude reference="eJq-vk-8gw"/>
+                                <exclude reference="Alv-mm-KKU"/>
+                                <exclude reference="o5v-4O-kXs"/>
+                                <exclude reference="oxA-2K-ig5"/>
+                                <exclude reference="tGa-5w-KUu"/>
+                                <exclude reference="3xm-Lj-E6n"/>
+                                <exclude reference="dpd-Ik-I2z"/>
+                                <exclude reference="p2U-8m-qFa"/>
+                                <exclude reference="sDD-qQ-pJs"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="RRH-0d-vt0"/>
+                                <include reference="lG1-2X-L6x"/>
+                                <include reference="lRW-73-msf"/>
+                                <include reference="vAW-gd-VFu"/>
+                                <include reference="b2D-uI-Qcl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="91o-yy-VWB"/>
+                                <include reference="ITQ-jN-ng8"/>
+                                <include reference="jZe-0e-AbF"/>
+                                <include reference="CBB-Eq-hqw"/>
+                                <include reference="Iki-0d-KO6"/>
+                                <exclude reference="pwh-r9-mt2"/>
+                                <exclude reference="wgY-qK-sIp"/>
+                                <include reference="6uc-Gv-mBj"/>
+                                <exclude reference="NPH-01-dDq"/>
+                                <include reference="RNF-hU-KWB"/>
+                                <include reference="eJq-vk-8gw"/>
+                                <include reference="Alv-mm-KKU"/>
+                                <exclude reference="o5v-4O-kXs"/>
+                                <include reference="oxA-2K-ig5"/>
+                                <include reference="tGa-5w-KUu"/>
+                                <include reference="3xm-Lj-E6n"/>
+                                <include reference="dpd-Ik-I2z"/>
+                                <exclude reference="p2U-8m-qFa"/>
+                                <include reference="sDD-qQ-pJs"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="enterMessageTextField" destination="lRW-73-msf" id="Mau-lB-5wK"/>
+                        <outlet property="enterNameTextField" destination="lG1-2X-L6x" id="uT8-nw-J2p"/>
+                        <outlet property="mailButton" destination="vAW-gd-VFu" id="MC1-VC-E58"/>
+                        <outlet property="messageLabel" destination="b2D-uI-Qcl" id="s5N-3c-ZZf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2089.5" y="400"/>
+        </scene>
+        <!--Barcelona-->
+        <scene sceneID="5fC-HZ-f3z">
+            <objects>
+                <viewController id="PJk-q3-rHl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="idn-Yb-2t9"/>
+                        <viewControllerLayoutGuide type="bottom" id="jTN-YQ-oG6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZLl-VO-LcX">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SagradaFamilia.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="hko-ok-HdP">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="600"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hko-ok-HdP"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="hko-ok-HdP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Barcelona" id="hno-Fe-DgZ">
+                        <barButtonItem key="rightBarButtonItem" title="Message" id="TTc-WG-sfS">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="Nl5-pj-M7z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vgw-dW-rpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="400"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mUc-z6-QM1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Qa-R8-VK3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XdW-ja-RZI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PJk-q3-rHl" kind="relationship" relationship="rootViewController" id="7PC-Ad-RzP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gas-gz-dKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="400"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AlbertEinsteinStamp.jpg" width="1917" height="1344"/>
+        <image name="SagradaFamilia.jpeg" width="205" height="245"/>
+    </resources>
 </document>
