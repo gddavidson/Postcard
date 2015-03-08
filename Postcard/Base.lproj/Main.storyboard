@@ -76,9 +76,20 @@
                                     <rect key="frame" x="16" y="72" width="368" height="67"/>
                                 </variation>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2J-L0-Hpf">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="147" width="280" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="s2J-L0-Hpf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="27q-G1-SWr"/>
+                            <constraint firstItem="s2J-L0-Hpf" firstAttribute="top" secondItem="b2D-uI-Qcl" secondAttribute="bottom" constant="8" symbolic="YES" id="2d0-vT-RfD"/>
                             <constraint firstItem="RRH-0d-vt0" firstAttribute="top" secondItem="b2D-uI-Qcl" secondAttribute="bottom" constant="8" symbolic="YES" id="3xm-Lj-E6n"/>
                             <constraint firstItem="lG1-2X-L6x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6uc-Gv-mBj">
                                 <variation key="widthClass=compact" constant="4"/>
@@ -108,6 +119,7 @@
                             <constraint firstItem="RRH-0d-vt0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="4" id="sDD-qQ-pJs"/>
                             <constraint firstItem="lRW-73-msf" firstAttribute="top" secondItem="lG1-2X-L6x" secondAttribute="bottom" constant="8" symbolic="YES" id="tGa-5w-KUu"/>
                             <constraint firstItem="vAW-gd-VFu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="4" id="wgY-qK-sIp"/>
+                            <constraint firstItem="RRH-0d-vt0" firstAttribute="leading" secondItem="s2J-L0-Hpf" secondAttribute="trailing" constant="4" id="wlB-La-Gqp"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -116,11 +128,14 @@
                                 <exclude reference="lRW-73-msf"/>
                                 <exclude reference="vAW-gd-VFu"/>
                                 <exclude reference="b2D-uI-Qcl"/>
+                                <exclude reference="s2J-L0-Hpf"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="91o-yy-VWB"/>
                                 <exclude reference="ITQ-jN-ng8"/>
                                 <exclude reference="jZe-0e-AbF"/>
+                                <exclude reference="27q-G1-SWr"/>
+                                <exclude reference="2d0-vT-RfD"/>
                                 <exclude reference="CBB-Eq-hqw"/>
                                 <exclude reference="Iki-0d-KO6"/>
                                 <exclude reference="pwh-r9-mt2"/>
@@ -137,6 +152,7 @@
                                 <exclude reference="dpd-Ik-I2z"/>
                                 <exclude reference="p2U-8m-qFa"/>
                                 <exclude reference="sDD-qQ-pJs"/>
+                                <exclude reference="wlB-La-Gqp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -146,11 +162,14 @@
                                 <include reference="lRW-73-msf"/>
                                 <include reference="vAW-gd-VFu"/>
                                 <include reference="b2D-uI-Qcl"/>
+                                <include reference="s2J-L0-Hpf"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="91o-yy-VWB"/>
                                 <include reference="ITQ-jN-ng8"/>
                                 <include reference="jZe-0e-AbF"/>
+                                <include reference="27q-G1-SWr"/>
+                                <include reference="2d0-vT-RfD"/>
                                 <include reference="CBB-Eq-hqw"/>
                                 <include reference="Iki-0d-KO6"/>
                                 <exclude reference="pwh-r9-mt2"/>
@@ -167,6 +186,7 @@
                                 <include reference="dpd-Ik-I2z"/>
                                 <exclude reference="p2U-8m-qFa"/>
                                 <include reference="sDD-qQ-pJs"/>
+                                <include reference="wlB-La-Gqp"/>
                             </mask>
                         </variation>
                     </view>
@@ -175,6 +195,7 @@
                         <outlet property="enterNameTextField" destination="lG1-2X-L6x" id="uT8-nw-J2p"/>
                         <outlet property="mailButton" destination="vAW-gd-VFu" id="MC1-VC-E58"/>
                         <outlet property="messageLabel" destination="b2D-uI-Qcl" id="s5N-3c-ZZf"/>
+                        <outlet property="nameLabel" destination="s2J-L0-Hpf" id="r2t-DO-ogk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
